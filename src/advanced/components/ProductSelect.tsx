@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ProductListType, ProductType } from "../types";
 
 type Props = {
@@ -7,6 +8,10 @@ type Props = {
 }
 
 const ProductSelect = ({ prodList, selectedProduct, setSelectedProduct }: Props) => {
+
+    useEffect(() => {
+        console.log('prodList:', prodList);
+    }, [prodList])
 
     const handleButton = (value: string) => {
 

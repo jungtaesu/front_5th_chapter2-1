@@ -9,5 +9,6 @@ export let prodList: ProductListType = [
     { id: 'p5', name: '상품5', price: 25000, quantity: 10 }
   ];
 
+export const discountRates:{ [key: string]: number } = { p1: 0.1, p2: 0.15, p3: 0.2, p4: 0.05, p5: 0.25 };
 
 // export let lastSel;

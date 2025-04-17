@@ -1,7 +1,13 @@
-export function notifyEvent(message) {
-    alert(message || "Event occurred!");
+import { ProductType } from "../types";
+import { prodList } from "../constants";
+import { useEffect, useRef } from "react";
+
+export function notifyEvent(lastSel: ProductType) {
+
 }
 
-export function notifyDiscount(discount) {
-    alert(discount ? `Discount applied: ${discount}%` : "No discount available.");
-}
+
+
+// export function notifyDiscount(lastSel) {
+
+// }
