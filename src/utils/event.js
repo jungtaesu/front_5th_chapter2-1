@@ -7,6 +7,7 @@ export const setEvents = () => {
 
 elementms.addToCart.addEventListener('click', function () {
   var selItem = elementms.productSelect.value;
+  console.log('selItem', selItem);
   var itemToAdd = prodList.find(function (p) { return p.id === selItem; });
   if (itemToAdd && itemToAdd.quantity > 0) {
     var item = document.getElementById(itemToAdd.id);
@@ -19,6 +20,7 @@ elementms.addToCart.addEventListener('click', function () {
     } else {
       var newItem = document.createElement('div');
       newItem.id = itemToAdd.id;
+      console.log('itemToAdd', itemToAdd);
       newItem.className = 'flex justify-between items-center mb-2';
       newItem.innerHTML = '<span>' + itemToAdd.name + ' - ' + itemToAdd.price + '원 x 1</span><div>' +
         '<button class="quantity-change bg-blue-500 text-white px-2 py-1 rounded mr-1" data-product-id="' + itemToAdd.id + '" data-change="-1">-</button>' +
